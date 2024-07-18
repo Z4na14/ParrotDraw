@@ -57,4 +57,5 @@ CMakeFiles/parrotC.dir/main.c.o: \
  /usr/include/linux/limits.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
- /usr/include/x86_64-linux-gnu/bits/dirent_ext.h
+ /usr/include/x86_64-linux-gnu/bits/dirent_ext.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h

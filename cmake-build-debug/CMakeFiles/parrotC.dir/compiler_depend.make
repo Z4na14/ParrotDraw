@@ -66,6 +66,7 @@ CMakeFiles/parrotC.dir/main.c.o: /mnt/c/Users/jorge/Desktop/Repos/ParrotDraw/mai
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h
 
 
@@ -186,6 +187,8 @@ CMakeFiles/parrotC.dir/main.c.o: /mnt/c/Users/jorge/Desktop/Repos/ParrotDraw/mai
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 

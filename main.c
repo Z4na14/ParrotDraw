@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <dirent.h>
 #include <string.h>
+#include <stdbool.h>
 
 #ifdef __MINGW32__
 #define platform 'W'
@@ -74,4 +75,23 @@ int main(int argc, char *argv[]) {
     numOfFiles = index - 2; // Changed the number of files to the actual one
 
 
+    index = 0;
+    while (true) {
+        clear();
+
+        if (index == numOfFiles) {
+            index = 0;
+        }
+
+        FILE *currFrame = fopen(filenames[index], "r");
+
+        char currbuff[50];
+        do {
+            fgets(currbuff, 49, currFrame);
+            printf("%s\n", currbuff);
+        }
+        while (currbuff[0] != '\0');
+
+        fclose(currFrame);
+    }
 }
