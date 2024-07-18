@@ -1,4 +1,4 @@
-CMakeFiles/parrotC.dir/main.c.o: \
+CMakeFiles/parrotC.exe.dir/main.c.o: \
  /mnt/c/Users/jorge/Desktop/Repos/ParrotDraw/main.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \

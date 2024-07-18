@@ -2,32 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include <dirent.h>
-#include <string.h>
 #include <stdbool.h>
-
-#ifdef __MINGW32__
-#define platform 'W'
-#endif
-
-#ifdef __linux__
-#define platform 'L'
-#endif
-
-// getting the platform using preprocessor directives
-void clear() {
-    switch (platform) {
-        case 'L': // Linux
-            system("clear");
-            break;
-
-        case 'W': // Windows
-            system("cls");
-            break;
-
-        default:
-            printf("System not recognized");
-    }
-}
+#include <time.h>
 
 
 int main(int argc, char *argv[]) {
@@ -50,7 +26,7 @@ int main(int argc, char *argv[]) {
 
     char filenames[numOfFiles][50];
 
-    if (strcmp(folderName, "")) { // If no folder is specified, return default
+    if (folderName[0] == '\0') { // If no folder is specified, return default
         sprintf(folderName, "%s", ".");
     }
 
@@ -72,26 +48,39 @@ int main(int argc, char *argv[]) {
 
 
     closedir(dr);
-    numOfFiles = index - 2; // Changed the number of files to the actual one
+    numOfFiles = index; // Changed the number of files to the actual one
 
-
-    index = 0;
+    index = 2;
     while (true) {
-        clear();
+
+#ifdef WIN32
+        if (system("cls") != 0){
+            break;
+        }
+#elif __linux__
+        if (system("clear") != 0){
+            break;
+        }
+#endif
 
         if (index == numOfFiles) {
-            index = 0;
+            index = 2;
         }
 
         FILE *currFrame = fopen(filenames[index], "r");
 
         char currbuff[50];
         do {
-            fgets(currbuff, 49, currFrame);
-            printf("%s\n", currbuff);
+            if (fgets(currbuff, 49, currFrame) == NULL){
+                break;
+            }
+            printf("%s", currbuff);
         }
         while (currbuff[0] != '\0');
 
         fclose(currFrame);
+        index++;
+
+        nanosleep((const struct timespec[]){{0, 50000000L}}, NULL);
     }
 }
