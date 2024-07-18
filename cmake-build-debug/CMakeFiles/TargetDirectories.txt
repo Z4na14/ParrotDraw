@@ -1,0 +1,3 @@
+/mnt/c/Users/jorge/Desktop/Repos/ParrotDraw/cmake-build-debug/CMakeFiles/pyparrot.dir
+/mnt/c/Users/jorge/Desktop/Repos/ParrotDraw/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/jorge/Desktop/Repos/ParrotDraw/cmake-build-debug/CMakeFiles/rebuild_cache.dir
