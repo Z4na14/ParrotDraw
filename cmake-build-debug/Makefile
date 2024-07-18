@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named pyparrot
+# Target rules for targets named parrotC
 
 # Build rule for target.
-pyparrot: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pyparrot
-.PHONY : pyparrot
+parrotC: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 parrotC
+.PHONY : parrotC
 
 # fast build rule for target.
-pyparrot/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pyparrot.dir/build.make CMakeFiles/pyparrot.dir/build
-.PHONY : pyparrot/fast
+parrotC/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parrotC.dir/build.make CMakeFiles/parrotC.dir/build
+.PHONY : parrotC/fast
 
 main.o: main.c.o
 .PHONY : main.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pyparrot.dir/build.make CMakeFiles/pyparrot.dir/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parrotC.dir/build.make CMakeFiles/parrotC.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -142,7 +142,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pyparrot.dir/build.make CMakeFiles/pyparrot.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parrotC.dir/build.make CMakeFiles/parrotC.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -150,7 +150,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pyparrot.dir/build.make CMakeFiles/pyparrot.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parrotC.dir/build.make CMakeFiles/parrotC.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -161,7 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... pyparrot"
+	@echo "... parrotC"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

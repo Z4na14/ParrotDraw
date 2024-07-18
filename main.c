@@ -4,15 +4,23 @@
 #include <dirent.h>
 #include <string.h>
 
+#ifdef __MINGW32__
+#define platform 'W'
+#endif
+
+#ifdef __linux__
+#define platform 'L'
+#endif
+
 // getting the platform using preprocessor directives
-void clear(char platform) {
+void clear() {
     switch (platform) {
         case 'L': // Linux
-            system("cls");
+            system("clear");
             break;
 
         case 'W': // Windows
-            system("clear");
+            system("cls");
             break;
 
         default:
@@ -41,7 +49,7 @@ int main(int argc, char *argv[]) {
 
     char filenames[numOfFiles][50];
 
-    if (folderName[0] == '\0') { // If no folder is specified, return default
+    if (strcmp(folderName, "")) { // If no folder is specified, return default
         sprintf(folderName, "%s", ".");
     }
 
@@ -64,4 +72,6 @@ int main(int argc, char *argv[]) {
 
     closedir(dr);
     numOfFiles = index - 2; // Changed the number of files to the actual one
+
+
 }

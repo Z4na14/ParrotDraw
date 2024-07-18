@@ -779,7 +779,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "pyparrot"
+			"value" : "ParrotDraw"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1076,6 +1076,42 @@
 			],
 			"type" : "BOOL",
 			"value" : "FALSE"
+		},
+		{
+			"name" : "ParrotDraw_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/mnt/c/Users/jorge/Desktop/Repos/ParrotDraw/cmake-build-debug"
+		},
+		{
+			"name" : "ParrotDraw_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "ParrotDraw_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/mnt/c/Users/jorge/Desktop/Repos/ParrotDraw"
 		},
 		{
 			"name" : "ProcessorCount_cmd_nproc",
