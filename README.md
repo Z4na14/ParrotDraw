@@ -1,5 +1,5 @@
 # PyParrot Draw
-![parrot](./parrot.gif)
+![parrot](images/parrot.gif)
 #### This is just a python script / libary _(I'm working on it)_ to animate ASCII images into de console
 [Download](https://github.com/Z4na14/PyParrotDraw/tags) | [Code](https://github.com/Z4na14/PyParrotDraw/blob/main/main.py)
 

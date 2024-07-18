@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/parrotC.dir/mnt/c/Users/jorge/Desktop/Repos/ParrotDraw/src/main.c.o -o parrotC

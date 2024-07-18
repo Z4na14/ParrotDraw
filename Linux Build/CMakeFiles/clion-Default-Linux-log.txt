@@ -1,0 +1,10 @@
+C:\Windows\system32\wsl.exe --distribution Ubuntu --exec /mnt/c/Users/jorge/AppData/Local/Programs/CLion/bin/ttyfix /bin/bash -c "export CLION_IDE=TRUE && export CMAKE_COLOR_DIAGNOSTICS=ON && export JETBRAINS_IDE=TRUE && cd '/mnt/c/Users/jorge/Desktop/Repos/ParrotDraw/Linux Build' && /home/z4na14/bin/cmake -S '/mnt/c/Users/jorge/Desktop/Repos/ParrotDraw/Linux Build' -B '/mnt/c/Users/jorge/Desktop/Repos/ParrotDraw/Linux Build'"
+-- The C compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done (0.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: /mnt/c/Users/jorge/Desktop/Repos/ParrotDraw/Linux Build
