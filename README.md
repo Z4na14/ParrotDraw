@@ -8,5 +8,4 @@
 ./parrotC [OPTIONS]
 ```
 
---folder (used to identify the folder with the frames located, if no specified,
-current folder will be used)
+For the program to work, the [folder](frames) needs to be downloaded and specified using the --folder option.
