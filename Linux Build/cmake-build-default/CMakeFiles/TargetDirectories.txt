@@ -1,3 +1,0 @@
-/mnt/c/Users/jorge/Desktop/Repos/ParrotDraw/Linux Build/cmake-build-default/CMakeFiles/parrotC.dir
-/mnt/c/Users/jorge/Desktop/Repos/ParrotDraw/Linux Build/cmake-build-default/CMakeFiles/edit_cache.dir
-/mnt/c/Users/jorge/Desktop/Repos/ParrotDraw/Linux Build/cmake-build-default/CMakeFiles/rebuild_cache.dir

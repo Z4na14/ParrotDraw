@@ -5,21 +5,25 @@
 #include <stdbool.h>
 #include <time.h>
 
+#ifdef _WIN32
+#include <conio.h>
+#else
+#include <stdio.h>
+#define clrscr() printf("\e[1;1H\e[2J")
+#endif
+
+
 
 int main(int argc, char *argv[]) {
 
     char folderName[50];
     int numOfFiles = 100;
 
+    // Leave the loop in case more options are added
     if (argc != 0) {
         for (int i = 1; i < argc; i++) {
-
             if (strcmp(argv[i], "--folder") == 0){
                 sprintf(folderName, "%s", argv[i+1]);
-            }
-
-            else if (strcmp(argv[i], "--C") == 0) {
-                numOfFiles = atoi(argv[i+1]);
             }
         }
     }
@@ -53,15 +57,8 @@ int main(int argc, char *argv[]) {
     index = 2;
     while (true) {
 
-#ifdef WIN32
-        if (system("cls") != 0){
-            break;
-        }
-#elif __linux__
-        if (system("clear") != 0){
-            break;
-        }
-#endif
+        clrscr();
+
 
         if (index == numOfFiles) {
             index = 2;
