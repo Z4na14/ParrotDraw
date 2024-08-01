@@ -1,23 +1,16 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
 #include <dirent.h>
 #include <stdbool.h>
 #include <time.h>
-
-#ifdef _WIN32
-#include <conio.h>
-#else
-#include <stdio.h>
-#define clrscr() printf("\e[1;1H\e[2J")
-#endif
 
 
 
 int main(int argc, char *argv[]) {
 
     char folderName[50];
-    int numOfFiles = 100;
+    int numOfFiles = 10000;
+
 
     // Leave the loop in case more options are added
     if (argc != 0) {
@@ -28,11 +21,12 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    char filenames[numOfFiles][50];
+    char filenames[numOfFiles][100];
 
     if (folderName[0] == '\0') { // If no folder is specified, return default
         sprintf(folderName, "%s", ".");
     }
+
 
     // Retrieving the files from the folder into an array
 
@@ -44,6 +38,8 @@ int main(int argc, char *argv[]) {
         return 0;
     }
 
+
+
     int index = 0;
     while ((de = readdir(dr)) != NULL) { // Appending the source of the files
         sprintf(filenames[index], "%s/%s", folderName, de->d_name);
@@ -54,11 +50,11 @@ int main(int argc, char *argv[]) {
     closedir(dr);
     numOfFiles = index; // Changed the number of files to the actual one
 
+
     index = 2;
     while (true) {
 
-        clrscr();
-
+        printf("\e[1;1H\e[2J");
 
         if (index == numOfFiles) {
             index = 2;
@@ -66,9 +62,11 @@ int main(int argc, char *argv[]) {
 
         FILE *currFrame = fopen(filenames[index], "r");
 
-        char currbuff[50];
+
+
+        char currbuff[110];
         do {
-            if (fgets(currbuff, 49, currFrame) == NULL){
+            if (fgets(currbuff, 100, currFrame) == NULL){
                 break;
             }
             printf("%s", currbuff);
@@ -80,4 +78,5 @@ int main(int argc, char *argv[]) {
 
         nanosleep((const struct timespec[]){{0, 50000000L}}, NULL);
     }
+
 }

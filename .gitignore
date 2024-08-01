@@ -2,3 +2,8 @@ build/
 .git/
 tests/
 *.zip
+cmake-build-debug/
+.idea/
+CMakeLists.txt
+src/main
+src/main.exe
